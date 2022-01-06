@@ -1,0 +1,4 @@
+#include<stdio.h>
+int main(){ /* program of add 2numbers */
+int a=23; /* a value is intialised */
+int sum=a+b; /* sum of a and b */

@@ -1,0 +1,13 @@
+if (( $# == 0 ))
+then
+tty > check
+orginal="/dev/pts/0"
+if [ "$check" == "$original" ]
+then
+sh divya.scr
+else
+exit
+fi
+else
+echo " this script not accepts any arguments"
+fi

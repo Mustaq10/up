@@ -1,0 +1,6 @@
+if (( $#==0 ))
+then 
+sed 's,\(^[^\/]*\)\/\*\([^\*]*\)\*\/[ ]*$,\1\/\/\2,' cfile
+else
+echo "script needs 0 arguments"
+fi

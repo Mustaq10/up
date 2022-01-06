@@ -1,0 +1,18 @@
+cat /etc/passwd > output
+if (( $#==1 ))
+then
+if [[ -f $1 ]]
+then
+echo "Username UserID groupID HomeDirectory"
+echo "-------------------------------------"
+cat output | cut -f1 -d: > 1
+cat output | cut -f3 -d: > 2
+cat output | cut -f4 -d: > 3
+cat output | cut -f6 -d: > 4
+paste 1 2 3 4 | expand --tabs=20
+else
+echo "This is not a file"
+fi
+else
+echo "This script accept only one argument"
+fi
